@@ -1,0 +1,10 @@
+<form [formGroup]="computerCustomizationForm" (ngSubmit)="onSubmit()">
+  <label for="case-color">caseColor: </label>
+  <input id="case-color" type="color" formControlName="caseColor" />
+  <label for="gpu-color">gpuColor: </label>
+  <input id="gpu-color" type="color" formControlName="gpuColor" />
+  <button type="submit">Submit</button>
+</form>
+<div class="logs">
+  {{ computerCustomizationForm.controls.caseColor.value }}
+</div>

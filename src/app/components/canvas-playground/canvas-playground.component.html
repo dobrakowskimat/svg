@@ -1,0 +1,20 @@
+<h2>Canvas playground</h2>
+<ng-container *ngIf="values">
+  <svg
+    xmlns="http:/www.w3.org/2000/svg"
+    #customizable
+    class="customizable-canvas"
+    width="800px"
+    height="500px"
+  >
+    <rect width="200" height="200" [attr.fill]="values.caseColor" />
+    <rect
+      width="200"
+      height="200"
+      x="200"
+      y="300"
+      [attr.fill]="values.gpuColor"
+    />
+  </svg>
+</ng-container>
+<div *ngIf="values">color: {{ values.caseColor }}</div>
